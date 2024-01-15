@@ -1,8 +1,3 @@
-# React + Vite
+# Drum Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a small project I built using react. It consists of 9 drum pad elements. Clicking on each element causes a sound to play. Pressing one of the corresponding keys shown on each of the drum pad elements also causes the sound to play. That is really all it does. Nothing too fancy. 
