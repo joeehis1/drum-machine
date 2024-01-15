@@ -1,0 +1,97 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+body{
+    background-color: hsl(67, 11%, 86%);
+    margin: 0;
+}
+
+header{
+    text-align: center;
+    border: 1px solid transparent;
+    background-image: linear-gradient(to bottom, rgb(141, 75, 75) 0 0.8vh, transparent 0.8vh), linear-gradient(to top, rgb(141, 75, 75) 0 0.8vh, transparent 0.8vh);
+    background-repeat: no-repeat;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.container{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.drum-machine{
+    // border: 1px solid;
+    text-align: center;
+}
+
+.drum-pad{
+    padding: 1.6rem;
+    background-color: rgb(141, 75, 75);
+    color: white;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover, &.played{
+        background-color: white;
+        color: rgb(141, 75, 75);
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "instruction drumpads"
+    "display drumpads";
+        .instruction{
+            grid-area: instruction;
+            // border: 1px solid;
+            text-align: left;
+            padding: 0.8rem;
+            background-image: linear-gradient(to right, rgb(141, 75, 75) 0 1.2vh, transparent 1.2vh), linear-gradient(to bottom, rgb(141, 75, 75) 0 0.3vh, white 0.3vh 0.5vh, rgb(141, 75, 75) 0.5vh 0.8vh,  transparent 0.8vh);
+            background-repeat: no-repeat;
+            align-self: center;
+        }
+    column-gap: 1.2rem;
+    .display{
+        grid-area: display;
+        // border: 1px solid;
+        font-size: 1.2rem;
+        align-self: center;
+        min-height: 2.5rem;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        padding: 0.8rem;
+        background-image: linear-gradient(to right, rgb(141, 75, 75) 0 1.2vh, transparent 1.2vh);
+        background-repeat: no-repeat;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+    .drumPads{
+        grid-area: drumpads;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.1vh;
+        
+    }
+
+}
